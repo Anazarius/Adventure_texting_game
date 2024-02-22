@@ -7,12 +7,16 @@
 
 using namespace std;
 
+void clearScreen() {
+    cout << "\033[2J\033[1;1H";
+}
 void slowPrint(string text, int delayMilliseconds) {
     for (char c : text) {
         if (_kbhit()) {
             char ch = _getch();
             if (ch == '\r') {
-                cout << text << endl;
+                cout << '\r' << string(text.size(), ' ') << '\r';
+                cout << text << flush;
                 return;
             }
         }
@@ -30,8 +34,25 @@ void startTitle() {
               "Your legs no longer step on your familiar rug, instead, there's something soft and lifeless beneath you. "
               "Glancing around, you understand that you are in a strange world where flaming torches float in the air, and the scent of magic lingers...\n", 30);
     pressAnyButton();
+    slowPrint("Before you unfolds a vibrant valley, but despite its beauty, a sense of unease creeps into your heart. "
+              "You stand in the midst of an unfamiliar village, surrounded by creatures you've never heard of in your world...\n", 30);
+    pressAnyButton();
+    slowPrint("An elderly man with a long beard approaches you and says:\n"
+              "Elderly man: Welcome to the Kingdom of Elentar! You are the chosen one, a programmer from another world. Here, we have our own rules, mysteries, and monsters. "
+              "You must unravel the secrets of this world and overcome trials to return home\n", 30);
+    slowPrint("Player: ok...", 30);
+    getchar();
+    clearScreen();
 }
-
-void dialog(string option1, string option2, string option3) {
-    cout << option1 << endl;
+void systemMessage(string message) {
+    slowPrint(message, 50);
+}
+void choice(string option1, string option2, string option3) {
+    cout << option1 << "\n";
+    if (!option2.empty()) {
+        cout << option2 << "\n";
+    }
+    if (!option3.empty()) {
+        cout << option3 << "\n";
+    }
 }
