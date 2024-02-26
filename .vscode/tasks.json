@@ -17,6 +17,7 @@
                 "${workspaceFolder}/main.cpp",
                 "${workspaceFolder}/creature.cpp",
                 "${workspaceFolder}/titles.cpp",
+                "${workspaceFolder}/doings.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
