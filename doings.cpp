@@ -5,12 +5,13 @@
 
 using namespace std;
 
-void talkToElderyMen() {
-    slowPrint("Ты решил подойти к старику, и поговорить с ним. По его мимике было ясно, что он готов ответить на все интересующие тебя вопросы.", 30);
+
+void Doings::talkToElderyMen() {
+    slowPrint("You decided to approach the old man and talk to him. From his expression, it was clear that he was ready to answer all the questions that interested you.", 30);
 }
-void goInForest() {
-    slowPrint("Направившись в сторону леса, по пути ты замечаешь лежащую рядом с тропинкой книгу. Это был путеводитель по данной стране! Тебе очень повезло!", 30);
+void Doings::goInForest() {
+    slowPrint("As you head towards the forest, you notice a book lying next to the path. It was a guidebook for this country! You are very lucky!", 30);
 }
-void killYourSelf() {
-    slowPrint("Ты подумал что это всё сон, а щипки не помогали, ты решил, что убив себя во сне ты проснешься. Ты поднял лежащую на столе косу, и перезал себе горло. К сожалению, ты не проснулся. Конец!", 30);
+void Doings::killYourSelf() {
+    slowPrint("You thought it was all a dream, and pinches didn't help. You decided that by killing yourself in the dream, you would wake up. You picked up the scythe lying on the table and slit your throat. Unfortunately, you didn't wake up. The end!", 30);
 }

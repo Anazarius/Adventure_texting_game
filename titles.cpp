@@ -48,12 +48,5 @@ void systemMessage(string message) {
     slowPrint(message, 50);
 }
 void choice(string option1, string option2, string option3) {
-    // cout << option1 << "\n";
-    // if (!option2.empty()) {
-    //     cout << option2 << "\n";
-    // }
-    // if (!option3.empty()) {
-    //     cout << option3 << "\n";
-    // }
     cout << option1 << option2 << option3 << endl;
 }

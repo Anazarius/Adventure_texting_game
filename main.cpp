@@ -19,6 +19,7 @@ int main() {
 
     Creature Player(Player_HP, Player_Damage, Player_Category);
     Creature Slime(Slime_HP, Slime_Damage, Slime_Category);
+    Doings Choices;
     startTitle();
     do {
         systemMessage("New quest received! Talk to Elderly man\n");
@@ -27,22 +28,21 @@ int main() {
         switch (choice) {
             case '1':
                 clearScreen();
-                talkToElderyMen();
+                Choices.talkToElderyMen();
                 break;
             case '2':
                 clearScreen();
-               goInForest();
+                Choices.goInForest();
                 break;
             case '3':
                 clearScreen();
-                killYourSelf();
+                Choices.killYourSelf();
                 break;
             default:
                 clearScreen();
                 continue;
         }
         break;
-        
     } while (1);
     return 0;
 }

@@ -1,3 +1,6 @@
-void talkToElderyMen();
-void goInForest();
-void killYourSelf();
+class Doings {
+    public:
+        void talkToElderyMen();
+        void goInForest();
+        void killYourSelf();
+};
